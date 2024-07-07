@@ -2,6 +2,7 @@ package com.alura.forohub.forohub.controller;
 
 import com.alura.forohub.forohub.domain.topico.*;
 import com.alura.forohub.forohub.service.TopicoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import jakarta.validation.ValidationException;
@@ -23,6 +24,7 @@ import java.util.regex.Pattern;
 
 @RestController
 @RequestMapping("/topicos")
+@SecurityRequirement(name = "bearer-key")
 public class TopicoController {
 
     @Autowired

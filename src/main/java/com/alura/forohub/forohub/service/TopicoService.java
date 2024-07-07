@@ -43,8 +43,6 @@ public class TopicoService {
         if (crearTopico.idCurso()==null){
             throw  new ValidacionIntegridad("Ingrese un curso para generar el topico ");
         }
-        //validaciones respetando los principios SOLID
-        validadores.forEach(v -> v.validar(crearTopico));
 
         if(!cursoRepository.findById(crearTopico.idCurso()).isPresent()){
             throw new ValidacionIntegridad("El curso no se encuentra registrado.");
