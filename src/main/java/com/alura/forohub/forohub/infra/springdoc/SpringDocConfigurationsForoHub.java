@@ -13,6 +13,7 @@ public class SpringDocConfigurationsForoHub {
         return new OpenAPI()
                 .components(new Components()
                         .addSecuritySchemes("bearer-key",
-                                new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("bearer").bearerFormat("JWT")));
+                                new SecurityScheme().type(SecurityScheme.Type.HTTP).
+                                        scheme("bearer").bearerFormat("JWT")));
     }
 }

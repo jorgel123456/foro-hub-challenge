@@ -13,7 +13,7 @@ public record DTORespuestaTopico(
 
         String mensaje,
 
-        LocalDateTime fecha,
+       // LocalDateTime fecha,
 
         Long idCurso,
 
@@ -21,6 +21,16 @@ public record DTORespuestaTopico(
 ) {
 
     public DTORespuestaTopico(Topico topico) {
-        this(topico.getId(),topico.getTitulo(), topico.getMensaje(),topico.getFecha(),topico.getCurso().getId(),topico.getUsuario().getId());
+        this(topico.getId(),topico.getTitulo(), topico.getMensaje(),topico.getCurso().getId(),topico.getUsuario().getId());
     }
+
+
+
+//    public DTORespuestaTopico(Long id, String titulo, String mensaje, Long idCurso, Long idUsuario) {
+//        this.id = id;
+//        this.titulo = titulo;
+//        this.mensaje = mensaje;
+//        this.idCurso = idCurso;
+//        this.idUsuario = idUsuario;
+//    }
 }
